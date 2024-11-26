@@ -5,6 +5,6 @@ Pair Activity: Refactor Code to Apply Object-Oriented Programming (Abstraction, 
 <br/>• Write scalable and maintainable code.
 <br/>• Apply object-oriented principles.
 ### Authors ####
-- Grace Anne Cornel
+- Grace Ann Cornel
 - Reymart Dela Cruz
 
