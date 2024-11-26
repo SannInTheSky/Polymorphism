@@ -12,9 +12,9 @@ namespace Polymorphism_DelaCruzCornel
         {
             Shape[] shapes = new Shape[]
             {
-                new Rectangle { Length = 10, Width = 5 },
-                new Circle { Radius = 7 },
-                new Triangle { Base = 5, Height = 8 }
+                new Rectangle (10, 5),
+                new Circle (7),
+                new Triangle (5, 8),
             };
 
             foreach (var shape in shapes)
@@ -32,8 +32,27 @@ namespace Polymorphism_DelaCruzCornel
 
     class Rectangle : Shape
     {
-        public double Length { get; set; }
-        public double Width { get; set; }
+        private double length;
+        private double width;
+
+
+        public double Length
+        {
+            get { return length; }
+            set { length = value; }
+        }
+
+        public double Width
+        {
+            get { return width;}
+            set { width = value; }
+        }
+
+        public Rectangle(double length, double width)
+        {
+            Length = length;
+            Width = width;
+        }
 
         public override double CalculateArea()
         {
@@ -43,7 +62,18 @@ namespace Polymorphism_DelaCruzCornel
 
     class Circle : Shape
     {
-        public double Radius { get; set; }
+        private double radius;
+        
+        public double Radius 
+        {   get { return radius; }
+
+            set { radius = value; }
+        }
+
+        public Circle(double radius)
+        {
+            Radius = radius;
+        }
 
         public override double CalculateArea()
         {
@@ -53,8 +83,29 @@ namespace Polymorphism_DelaCruzCornel
 
     class Triangle : Shape
     {
-        public double Base { get; set; }
-        public double Height { get; set; }
+        
+        private double basetriangle;
+        private double height;
+        
+        
+        public double Base 
+        {
+            get { return basetriangle; }
+            set { basetriangle = value; } 
+        }
+
+        public double Height 
+        {
+            get { return height; }
+            set { height = value; } 
+        }
+
+        public Triangle (double basetriangle, double height)
+        {
+            Base = basetriangle;
+            Height = height;
+        }
+
 
         public override double CalculateArea()
         {
